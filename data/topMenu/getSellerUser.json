@@ -1,0 +1,9 @@
+{
+	"responseCode": 1,
+	"responseMessage": "success",
+	"responseContent": {
+		"userId": "PD121212",
+		"userName": "zoujie",
+		"email": ""
+	}
+}

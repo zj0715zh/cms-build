@@ -1,0 +1,11 @@
+#noPermission{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#noPermission h1{
+	text-align: center;
+	margin-top: 200px;
+}
