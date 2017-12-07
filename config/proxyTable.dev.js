@@ -1,0 +1,23 @@
+module.exports = {
+    '/user/getSellerUser':{
+        target:'http://localhost:8384/',
+        changeOrigin:true,
+        pathRewrite:{
+            '^/user/getSellerUser':'/data/topMenu/getSellerUser.json'//如果是接口多出来的一层目录，则设为空字符串，如：/liuyong/discount/getIndex
+        }
+    },
+    '/main/logout':{
+        target:'http://localhost:8384/',
+        changeOrigin:true,
+        pathRewrite:{
+            '^/main/logout':'/data/topMenu/logout.json'//如果是接口多出来的一层目录，则设为空字符串，如：/liuyong/discount/getIndex
+        }
+    },
+    '/order/querySellerOrder':{
+        target:'http://localhost:8384/',
+        changeOrigin:true,
+        pathRewrite:{
+            '^/order/querySellerOrder':'/data/orderManage/orderList.json'//如果是接口多出来的一层目录，则设为空字符串，如：/liuyong/discount/getIndex
+        }
+    }
+}
