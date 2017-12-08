@@ -23,7 +23,7 @@ Object.keys(proxyTable).forEach(function (context) {
 })
 
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
-app.set('views','./dist/module')
+app.set('views','./dist/pages')
 app.set('view engine','ejs')
 app.use(staticPath, express.static('./dist/static'))
 
@@ -41,40 +41,10 @@ app.get('/express/abc', function (req, res) {
 
 // 本地路由
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('cms')
 });
-app.get('/category/:id', function (req, res) {
-  res.render('category')
-});
-app.get('/product/:id', function (req, res) {
-  res.render('pro_detail')
-});
-app.get('/user/index', function (req, res) {
-  res.render('user_center')
-});
-app.get('/user/myorder', function (req, res) {
-  res.render('my_order')
-});
-app.get('/user/myaddress', function (req, res) {
-  res.render('my_address')
-});
-app.get('/user/mycard', function (req, res) {
-  res.render('my_card')
-});
-app.get('/user/addressedit', function (req, res) {
-  res.render('edite_address')
-});
-app.get('/user/mycollected', function (req, res) {
-  res.render('my_collected')
-});
-app.get('/user/help', function (req, res) {
-  res.render('help')
-});
-app.get('/order/submit/:id', function (req, res) {
-  res.render('order_confirm')
-});
-app.get('/pay/:id', function (req, res) {
-  res.render('pay_confirm')
+app.get('/noPermission', function (req, res) {
+  res.render('noPermission')
 });
 
 //get方式返回json数据
