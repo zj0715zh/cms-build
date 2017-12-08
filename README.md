@@ -16,7 +16,7 @@ npm run dev
 
 # 第四步本地部署
 npm run build（本地部署的具体配置查看config/index.js文件）
-
+```
 
 ## 线上访问地址
 服务器：阿里云ECS，部署框架：PM2，数据基于Mock
