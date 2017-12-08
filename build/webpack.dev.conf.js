@@ -71,7 +71,7 @@ for (var pathname in pages) {
   };
 
   if (pathname in module.exports.entry) {
-    conf.chunks = ['manifest', 'vendor', pathname];
+    conf.chunks = ['modify', 'compress', pathname];
     conf.hash = true;
   }
 

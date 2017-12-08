@@ -86,7 +86,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     // 提取css到页面中去
     new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
+      name: 'compress',
       minChunks: function (module, count) {
         return (
           module.resource &&
@@ -98,8 +98,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      chunks: ['vendor']
+      name: 'modify',
+      chunks: ['compress']
     })
   ]
 })
@@ -158,7 +158,7 @@ for (var pathname in pages) {
   };
 
   if (pathname in module.exports.entry) {
-    conf.chunks = ['manifest', 'vendor', pathname];
+    conf.chunks = ['modify', 'compress', pathname];
     conf.hash = true;
   }
 
