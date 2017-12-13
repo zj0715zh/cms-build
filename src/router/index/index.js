@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -11,22 +12,27 @@ export default new Router({
       component: resolve => require(['components/index/index'], resolve)
     },
     {
-      path: '/goodsManage',
+      path: '/cms/index',
+      name: '首页',
+      component: resolve => require(['components/index/index'], resolve)
+    },
+    {
+      path: '/cms/goodsManage',
       name: '商品管理',
       component: resolve => require(['components/goodsManage/goodsManage'], resolve)
     },
     {
-      path: '/orderManage',
+      path: '/cms/orderManage',
       name: '订单管理',
       component: resolve => require(['components/orderManage/orderManage'], resolve)
     },
     {
-      path: '/serveManage',
+      path: '/cms/serveManage',
       name: '售后管理',
       component: resolve => require(['components/serveManage/serveManage'], resolve)
     },
     {
-      path: '/addStepOne',
+      path: '/cms/addStepOne',
       name: '编辑基本信息',
       component: resolve => require(['components/addStepOne/addStepOne'], resolve)
     },

@@ -1,6 +1,6 @@
 <template>
 <section id="topMenu">
-	<img src="http://www.ppdaicdn.com/invest/2016/index/images/slogan.png">
+	<a href="javascript:;" class="cmslogo">混合模式下的CMS系统</a>
 	<section class="user_info">
 		<div class="user_name">
 			<span>{{userName}}</span>
@@ -43,8 +43,7 @@
 	    },
 	    methods: {
 	      	loginOut(){
-	      		this.$store.commit('set_isLoading',{isLoading:true})
-	      		this.clearCookie();
+	      		this.$router.push('/noPermission');
 	      	},
 	      	clearCookie(){ 
 	      		window.location.href="https://ac.ppdai.com/User/Logout?redirect=http%3A%2F%2Fstoresop.ppdai.com%2F";

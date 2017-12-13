@@ -43,6 +43,9 @@ app.get('/express/abc', function (req, res) {
 app.get('/', function (req, res) {
   res.render('cms')
 });
+app.get('/cms/*', function (req, res) {
+  res.render('cms')
+});
 app.get('/noPermission', function (req, res) {
   res.render('noPermission')
 });
@@ -57,7 +60,7 @@ app.get('/data/:page/:file', function (req, res) {
   setTimeout(()=>{
     res.json(jsonDate);//json格式输出
     res.end();
-  },1000)
+  },0)
 });
 //post方式返回json数据
 app.post('/data/:page/:file', function (req, res) {
@@ -69,7 +72,7 @@ app.post('/data/:page/:file', function (req, res) {
   setTimeout(()=>{
     res.json(jsonDate);//json格式输出
     res.end();
-  },1000)
+  },0)
 });
 
 

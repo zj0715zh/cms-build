@@ -9,6 +9,11 @@
 	width: 200px;
 	vertical-align: middle;
 }
+#topMenu .cmslogo{
+	color: #fff;
+	display: inline-block;
+	font-size: 24px;
+}
 #topMenu .user_info{
 	float: right;
 }

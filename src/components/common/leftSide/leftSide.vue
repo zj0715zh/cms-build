@@ -10,19 +10,19 @@
 			    <span slot="title" style="font-size: 16px;color: #fff;">菜单管理</span>
 		  	</el-menu-item>
 	  	</a>
-	  	<a href="#goodsManage">
+	  	<a href="javascript:;" @click="jump('/cms/goodsManage')">
 		  	<el-menu-item index="1">
 			    <i class="icon iconfont icon-shangpinguanli2"></i>
 			    <span slot="title">商品管理</span>
 		  	</el-menu-item>
 	  	</a>
-	  	<a href="#orderManage">
+	  	<a href="javascript:;" @click="jump('/cms/orderManage')">
 		  	<el-menu-item index="2">
 			    <i class="icon iconfont icon-weibiaoti3"></i>
 			    <span slot="title">订单管理</span>
 		  	</el-menu-item>
 	  	</a>
-	   	<a href="#serveManage">
+	   	<a href="javascript:;" @click="jump('/cms/serveManage')">
 		  	<el-menu-item index="3">
 			    <i class="icon iconfont icon-aftersale"></i>
 			    <span slot="title">售后管理</span>
