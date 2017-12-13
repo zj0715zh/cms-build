@@ -45,11 +45,6 @@ export default new Router({
       path: '/addStepThree',
       name: '编辑商品sKu',
       component: resolve => require(['components/addStepThree/addStepThree'], resolve)
-    },
-    {
-      path: '/noPermission',
-      name: '无权限页，禁止访问',
-      component: resolve => require(['components/noPermission/noPermission'], resolve)
     }
   ]
 })
