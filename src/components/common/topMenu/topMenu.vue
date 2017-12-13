@@ -43,7 +43,7 @@
 	    },
 	    methods: {
 	      	loginOut(){
-	      		this.$router.push('/noPermission');
+	      		window.location.href = '/noPermission';
 	      	},
 	      	clearCookie(){ 
 	      		window.location.href="https://ac.ppdai.com/User/Logout?redirect=http%3A%2F%2Fstoresop.ppdai.com%2F";
