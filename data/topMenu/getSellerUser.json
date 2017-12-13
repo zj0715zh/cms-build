@@ -1,9 +1,15 @@
 {
-	"responseCode": 1,
-	"responseMessage": "success",
-	"responseContent": {
-		"userId": "PD121212",
-		"userName": "zoujie",
-		"email": ""
+	"code": 1,
+	"message": "成功",
+	"content": {
+		"userId": 2121221,
+		"userName": "itzou",
+		"sellerId": 10,
+		"sellerName": "商家名字",
+		"sellerUserName": "itzou",
+		"email": "Null",
+		"permission": {},
+		"verified": false,
+		"admin": false
 	}
 }
