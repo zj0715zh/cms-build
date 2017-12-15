@@ -146,7 +146,7 @@
 								let sessionDate =JSON.stringify(vm.stepOneForm)
 								St.setItem('stepOneForm',sessionDate)
 								//doAjax
-								vm.$router.push('/addStepTwo')
+								vm.$router.push('/cms/addStepTwo')
 							}	            	
 			          	} else {
 			            	console.log('error submit!!');
@@ -163,7 +163,7 @@
 	      	},
 	      	returnGoodsList(){
 	      		this.$store.dispatch('clear_session',{sessionList:['stepOneForm','stepTwoForm','stepThreeForm']})
-	      		this.jump('/goodsManage');
+	      		this.jump('/cms/goodsManage');
 	      	}
 		},
 		mounted(){

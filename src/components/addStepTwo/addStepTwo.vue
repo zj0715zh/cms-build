@@ -200,19 +200,19 @@
 				var vm = this;
 				var canStore = vm.storeDate();
 				if(canStore){
-					vm.$router.push('/addStepThree')
+					vm.$router.push('/cms/addStepThree')
 				}
 	      	},
 	      	preStep(goodsId){
 	      		var vm = this;
 				var canStore = vm.storeDate();
 				if(canStore){
-					vm.$router.push('/addStepOne')
+					vm.$router.push('/cms/addStepOne')
 				}
 	      	},
 	      	returnGoodsList(){
 	      		this.$store.dispatch('clear_session',{sessionList:['stepOneForm','stepTwoForm','stepThreeForm']})
-	      		this.jump('/goodsManage');
+	      		this.jump('/cms/goodsManage');
 	      	},
 	      	storeDate(){
 	      		var vm = this;

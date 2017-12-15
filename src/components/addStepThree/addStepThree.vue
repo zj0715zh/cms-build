@@ -148,7 +148,7 @@
 	      		var vm = this;
 				var canStore = vm.storeDate();
 				if(canStore){
-					vm.$router.push('/addStepTwo')
+					vm.$router.push('/cms/addStepTwo')
 				}
 	      	},
 	    	addGoods(){
@@ -187,7 +187,7 @@
 	    	},
 	    	returnGoodsList(){
 	      		this.$store.dispatch('clear_session',{sessionList:['stepOneForm','stepTwoForm','stepThreeForm']})
-	      		this.jump('/goodsManage');
+	      		this.jump('/cms/goodsManage');
 	      	},
 	    	handleCurrentChange(val) {
 		        console.log(`当前页: ${val}`);

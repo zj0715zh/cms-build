@@ -28,7 +28,7 @@
 			.then((response)=>{
 				var data = response.data.content;
 				if(data.userId == undefined){
-					this.$router.push('/noPermission')
+					window.location.href = '/noPermission';
 					return;
 				}
 	    		this.$store.commit('SET_USER',{user:data})

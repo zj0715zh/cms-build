@@ -36,12 +36,12 @@ export default new Router({
       component: resolve => require(['components/addStepOne/addStepOne'], resolve)
     },
     {
-      path: '/addStepTwo',
+      path: '/cms/addStepTwo',
       name: '编辑商品属性信息',
       component: resolve => require(['components/addStepTwo/addStepTwo'], resolve)
     },
     {
-      path: '/addStepThree',
+      path: '/cms/addStepThree',
       name: '编辑商品sKu',
       component: resolve => require(['components/addStepThree/addStepThree'], resolve)
     }

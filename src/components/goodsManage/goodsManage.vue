@@ -150,7 +150,7 @@
 	        	},200)
 	      	},
 	      	handleEdit(index, row){
-	      		this.$router.push('/addStepOne')
+	      		this.$router.push('/cms/addStepOne')
 	      	},
 	      	handleDelete(index, row) {
 	        	console.log(index, row);
