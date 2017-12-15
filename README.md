@@ -16,6 +16,14 @@ npm run dev
 
 # 第四步本地部署
 npm run build（本地部署的具体配置查看config/index.js文件）
+
+# 云服务器部署
+第一步：将仓库clone到云服务器
+第二步：安装依赖（npm i）
+第三步：构建页面和静态文件（node build/ali-build.js）因为本人时部署在阿里云ECS上的，所以取了个这个名字
+第四步：安装pm2，具体安装步骤可以百度
+第五步：pm2 start build/ali-server.js
+第六步：查看运行的项目列表（pm2 ls）
 ```
 
 ## 线上访问地址
