@@ -1,6 +1,6 @@
 <template>
 <section id="topMenu">
-	<a href="javascript:;" class="cmslogo">混合模式下的CMS系统</a>
+	<a href="javascript:;" class="cmslogo">Vue混合模式下的CMS系统</a>
 	<section class="user_info">
 		<div class="user_name">
 			<span>{{userName}}</span>
