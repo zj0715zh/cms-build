@@ -1,0 +1,36 @@
+{
+	"apps": [{
+		"name": "build",
+		"script": "build/ali-build.js",
+		"watch":false,
+		"log_date_format": "YYYY-MM-DD HH:mm Z",
+		"error_file": "log/build_error.log",
+		"out_file": "log/build_out.log",
+		"pid_file": "pids/build_pip.pid",
+		"instances": 1,
+	},{
+		"name": "cms",
+		"script": "build/ali-server.js",
+		"exec_mode": "fork",
+		"max_memory_restart": "100M",
+		"autorestart": true,
+		"node_args": [],
+		"args": [],
+		"env": {
+			"PORT": 8384,
+            "NODE_ENV": "production"
+		},
+		"log_date_format": "YYYY-MM-DD HH:mm Z",
+		"error_file": "log/cms_error.log",
+		"out_file": "log/cms_out.log",
+		"pid_file": "pids/cms_pip.pid",
+		"instances": 1,
+		"min_uptime": "200s",
+		"max_restarts": 10,
+		"watch": ["src","static"],
+		"ignore_watch": ["node_module"],
+		"merge_logs": true,
+		"exec_interpreter": "node",
+		"vizion": false
+	}]
+}

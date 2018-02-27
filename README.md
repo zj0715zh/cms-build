@@ -1,4 +1,4 @@
-# 分期商城商家管理后台，基于vue的单页和多页双重架构
+# 商家管理后台，基于vue的单页和多页双重架构
 
 ### git仓库地址：git@github.com:zj0715zh/cms-build.git
 
@@ -22,16 +22,17 @@ npm run build（本地部署的具体配置查看config/index.js文件）
 第二步：安装依赖（npm i）
 第三步：构建页面和静态文件（node build/ali-build.js）因为本人时部署在阿里云ECS上的，所以取了个这个名字
 第四步：安装pm2，具体安装步骤可以百度
-第五步：pm2 start build/ali-server.js
+第五步：pm2 start build/ali-server.js(另一种方法：pm2 start pm2.json，这种方法可以省去第三步)
 第六步：查看运行的项目列表（pm2 ls）
 ```
 
 ## 线上访问地址
-服务器：阿里云ECS，部署框架：PM2，数据基于Mock
+说明（服务器：阿里云ECS，服务进程管理监控：PM2，页面数据请求通过proxyTable转发到express服务层，express返回本地json数据）
 http://47.89.249.180:8384/ 双重架构的后台系统
 
 
 ## 多页架构的商城系统
-#git仓库地址：git@github.com:zj0715zh/cms-build.git
+说明（同上）
+#git仓库地址：git@github.com:zj0715zh/mstore-build.git
 #线上访问地址 http://47.89.249.180:8181/
 
