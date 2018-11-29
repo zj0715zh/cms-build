@@ -37,38 +37,38 @@ webpack(webpackConfig, function (err, stats) {
     chunks: false,
     chunkModules: false
   }) + '\n')
-  var fileLength = fs.readdirSync(modulePath)
-  for(i=0;i<fileLength.length;i++){
-    var fileName = fileLength[i].split('.').shift();
-    var rs = fs.createReadStream(modulePath+'/'+fileName+'.html')
-    var ws = fs.createWriteStream(modulePath+'/'+fileName+'.ftl')
-    rs.pipe(ws);
-    console.log(fileName)
-  }
-  setTimeout(()=>{
-    for(i=0;i<fileLength.length;i++){
-      var fileName = fileLength[i].split('.').pop();
-      if(fileName=='html'){
-        fs.unlinkSync(modulePath+'/'+fileLength[i])
-      }
-    }
-    console.log("html文件删除完成")
-  },1000)
-  setTimeout(()=>{
-    cmd.get('cp -r '+modulePath+'/*.ftl '+config.build.htmlRoot,function(err, data, stderr){
-      if(err){
-        console.log(err)
-        return;
-      }
-      console.log('文件本地部署完成')
-      childProcess.execFile(path.resolve(__dirname, '../config/deploy.bat'),{cwd:config.build.javaRoot},function(e, stdout, stderr) {
-          if(e){
-            console.log(e);
-            return;
-          }
-    　　　console.log(stdout);
-          console.log('git远程仓库push完成')
-      });
-    })
-  },2000)
+  // var fileLength = fs.readdirSync(modulePath)
+  // for(i=0;i<fileLength.length;i++){
+  //   var fileName = fileLength[i].split('.').shift();
+  //   var rs = fs.createReadStream(modulePath+'/'+fileName+'.html')
+  //   var ws = fs.createWriteStream(modulePath+'/'+fileName+'.ftl')
+  //   rs.pipe(ws);
+  //   console.log(fileName)
+  // }
+  // setTimeout(()=>{
+  //   for(i=0;i<fileLength.length;i++){
+  //     var fileName = fileLength[i].split('.').pop();
+  //     if(fileName=='html'){
+  //       fs.unlinkSync(modulePath+'/'+fileLength[i])
+  //     }
+  //   }
+  //   console.log("html文件删除完成")
+  // },1000)
+  // setTimeout(()=>{
+  //   cmd.get('cp -r '+modulePath+'/*.ftl '+config.build.htmlRoot,function(err, data, stderr){
+  //     if(err){
+  //       console.log(err)
+  //       return;
+  //     }
+  //     console.log('文件本地部署完成')
+  //     childProcess.execFile(path.resolve(__dirname, '../config/deploy.bat'),{cwd:config.build.javaRoot},function(e, stdout, stderr) {
+  //         if(e){
+  //           console.log(e);
+  //           return;
+  //         }
+  //   　　　console.log(stdout);
+  //         console.log('git远程仓库push完成')
+  //     });
+  //   })
+  // },2000)
 })
