@@ -6,34 +6,29 @@ export default new Router({
   mode:process.env.NODE_ENV === 'production' ?'history':'hash',
   routes: [
     {
-      path: '/',
-      name: '首页',
-      component: resolve => require(['components/index/index'], resolve)
-    },
-    {
       path: '/cms/index',
       name: '首页',
-      component: resolve => require(['components/index/index'], resolve)
+      component: r => require.ensure([], () => r(require('components/index/index')), 'spa-cms-index')
     },
     {
       path: '/cms/goodsManage',
       name: '商品管理',
-      component: resolve => require(['components/goodsManage/goodsManage'], resolve)
+      component: r => require.ensure([], () => r(require('components/goodsManage/goodsManage')), 'spa-cms-goodsManage')
     },
     {
       path: '/cms/orderManage',
       name: '订单管理',
-      component: resolve => require(['components/orderManage/orderManage'], resolve)
+      component: r => require.ensure([], () => r(require('components/orderManage/orderManage')), 'spa-cms-orderManage')
     },
     {
       path: '/cms/serveManage',
       name: '售后管理',
-      component: resolve => require(['components/serveManage/serveManage'], resolve)
+      component: r => require.ensure([], () => r(require('components/serveManage/serveManage')), 'spa-cms-serveManage')
     },
     {
       path: '/cms/addStepOne',
       name: '编辑基本信息',
-      component: resolve => require(['components/addStepOne/addStepOne'], resolve)
+      component: r => require.ensure([], () => r(require('components/addStepOne/addStepOne')), 'spa-cms-addStepOne')
     },
     {
       path: '/cms/addStepTwo',
